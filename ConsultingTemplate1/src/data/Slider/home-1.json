@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Grow Your Business With Us",
+    "text": "Monitor always try to provide the best Business Solutions for Clients to grow up their Business very sharply and smoothly.",
+    "bg": "slide_test_7.jpg",
+    "btnText": "Learn More",
+    "btnLink": "/about"
+  },
+  {
+    "id": 2,
+    "title": "Invest with us & Grow Business",
+    "text": "Monitor always try to provide the best Business Solutions for Clients to grow up their Business very sharply and smoothly.",
+    "bg": "slide_test_4.jpg",
+    "btnText": "Learn More",
+    "btnLink": "/about"
+  }
+]
