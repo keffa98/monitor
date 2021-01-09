@@ -1145,9 +1145,11 @@ h6 { font-size: 18px; line-height: 18px; }
 	position: relative;
 	padding: 91px 0 89px;
 }
-.page-content h2 {	
+.page-content  {	
+    
+    background-image: url("images/slides/slide_test_7.jpg") ;
     text-align: left;
-    color: #fff;
+    color: #000;
     margin-bottom: 4px;
     line-height: 58px;
     margin-left: -2px;
@@ -5422,7 +5424,7 @@ td.product-subtotal {
     margin-left: -1px;
 } 
 .footer .widget.widget-useful .one-half {
-    width: 45.5%;
+    width: 50%;
     float: left;
 }
 
