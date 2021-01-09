@@ -1,65 +1,855 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
+<head>
+    <!-- Basic Page Needs -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <title>Monitor</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.22.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.22.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.22.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.22.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.22.0/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+    <meta name="author" content="themesflat.com">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css" >
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+
+    <!-- REVOLUTION LAYERS STYLES -->
+    <link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
+
+    <!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/colors/color2.css" id="colors">
+    
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/twentytwenty.css">
+
+    <!-- Favicon and touch icons  -->
+    <link href="icon/apple-touch-icon-48-precomposed.png" rel="apple-touch-icon-precomposed" sizes="48x48">
+    <link href="icon/apple-touch-icon-32-precomposed.png" rel="apple-touch-icon-precomposed">
+    <link href="icon/favicon.png" rel="shortcut icon">
+
+    <!--[if lt IE 9]>
+        <script src="javascript/html5shiv.js"></script>
+        <script src="javascript/respond.min.js"></script>
+    <![endif]-->
+</head>                                 
+<body class="header-sticky v3"> 
+    <!-- Preloader -->
+    <section class="loading-overlay">
+        <div class="Loading-Page">
+            <h2 class="loader">Loading</h2>
+        </div>
+    </section>    
+
+    <!-- Boxed -->
+    <div class="boxed">
+
+        <div class="site-wrapper">
+            <!-- <div class="top bg-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 top-reponsive">                      
+                            <ul class="flat-information">
+                                <li class="phone"><a href="#">1 (800) 686-6688</a></li>
+                                <li class="email"><a href="#">contact@coaching.com</a></li>
+                            </ul>           
+                        </div><//-- /.col-md-6 >       
+                        <div class="col-md-6 col-sm-6 top-reponsive">
+                            <ul class="social-links">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                            <div class="flat-dropdown flat-sign-in">                        
+                                <ul class="unstyled">
+                                    <li class="current"><a href="#">Sign In</a>
+                                        <ul class="unstyled">
+                                            <li class="en"><a href="#">Profile</a></li>
+                                            <li class="ge"><a href="#">Sign Out</a></li>
+                                        </ul>
+                                     </li>
+                                </ul>
+                            </div> 
+                            <div class="flat-dropdown flat-language">                        
+                                <ul class="unstyled">
+                                    <li class="current"><a href="#">English</a>
+                                        <ul class="unstyled">
+                                            <li class="en"><a href="#">French</a></li>
+                                            <li class="ge"><a href="#">German</a></li>
+                                        </ul>
+                                     </li>
+                                </ul>
+                            </div>
+                        </div>        
+                    </div><// -- /.row >
+                </div><// -- /.container >
+            </div><//.top -->
+
+            <!-- Header -->            
+            <header id="header" class="header clearfix">
+                <div class="flat-header clearfix">
+                    <div class="container">
+                        <div class="row">                 
+                            <div class="header-wrap clearfix">
+                                <div class="col-md-3">
+                                    <div id="logo" class="logo">
+                                        <h1><a href="index.html" rel="home">
+                                            MONITOR
+                                        </a></h1>
+                                    </div><!-- /.logo -->
+                                    <div class="btn-menu">
+                                        <span></span>
+                                    </div><!-- //mobile menu button -->
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="nav-wrap">                            
+                                        <nav id="mainnav" class="mainnav">
+                                            <ul class="menu"> 
+                                                <li class="active">
+                                                    <a href="index.html">ACCEUIL</a>
+                                                      <!-- <ul class="submenu"> 
+                                                        <li><a href="index.html">Home LifeCoach 01</a></li>
+                                                        <li><a href="index2.html">Home LifeCoach 02</a></li>
+                                                        <li><a href="index3.html">Home HealthCoach 01</a></li>  
+                                                        <li><a href="index4.html">Home HealthCoach 02</a></li> 
+                                                    </ul>/.submenu -->
+                                                </li>
+                                                
+                                                <li><a href="#">PRESTATIONS</a>
+                                                    <ul class="submenu"> 
+                                                        <!-- <li><a href="lifecoach.html">Service 1</a>
+                                                            </li>
+                                                        <li><a href="program-plan.html">Service 2</a>
+                                                            </li> -->
+                                                            <li><a href="assistance-administrative.html">Assistance Administrative</a></li>
+                                                            <li><a href="gestions-reseaux.html">Gestion de réseaux sociaux</a></li>
+                                                            <li><a href="sav.html">Services Après Vente</a></li>
+                                                            <li><a href="developpement-web.html">Développement Web</a></li>
+                                                            <li><a href="etudes-statistiques.html">Etudes Statistiques</a></li>
+                                                            <li><a href="traductions.html">Traductions</a></li>
+                                                    </ul>
+                                                </li>
+                                                <!-- <li><a href="#">Team</a></li> -->
+                                                <!-- <li><a href="#">About</a></li> -->
+                                                 <li><a href="contact.html">Contact</a></li>                    
+                                            </ul><!-- /.menu -->
+                                        </nav><!-- /.mainnav -->
+
+                                        <div class="top-search">                        
+                                            <form action="#" id="searchform-all" method="get">
+                                                <div>
+                                                    <input type="text" id="s" class="sss" placeholder="Search...">
+                                                    <input type="submit" value="" id="searchsubmit">
+                                                </div>
+                                            </form>
+                                        </div><!-- /top-search --> 
+
+                                        <!--ul class="menu menu-extra">
+                                            <li class="show-search">
+                                                <a href="#"><i class="icon_search"></i></a>
+                                            </li>
+                                        </ul> 
+                                    </div><-- /.nav-wrap -->
+                                    
+                                </div>                      
+                            </div><!-- /.header-inner -->                 
+                        </div><!-- /.row -->
+                    </div>
+                </div>
+            </header><!-- /.header -->
+        </div><!-- /.site-wrapper -->
+
+        <div id="rev_slider_1078_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container home-health-coach" data-alias="classic4export" data-source="gallery" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+                <!-- START REVOLUTION SLIDER 5.3.0.2 auto mode -->
+                <div id="rev_slider_1078_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.0.2">
+                    <div class="slotholder"></div>
+                    <ul><!-- SLIDE  -->
+                
+                        <!-- SLIDE 1 -->
+                        <li data-index="rs-3049" data-transition="fade" data-slotamount="default"  data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="500"  data-rotate="0"  data-saveperformance="off"  data-title="Ken Burns" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">                        
+
+                            <!-- MAIN IMAGE -->
+                            <img src="images/slides/slide_test_7.jpg"  alt=""  data-bgposition="center center" data-kenburns="off" data-duration="500" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+
+                            <!-- LAYER NR. 12 -->
+                            <div class="tp-caption title-slide style2" 
+                                id="slide-3049-layer-1" 
+                                data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                data-y="['middle','middle','middle','middle']" data-voffset="['-113','-113','-50','-50']" 
+                                data-fontsize="['80','80','45','30']"
+                                data-fontweight="['400','400','400','400']"
+                                data-width="none"
+                                data-height="none"
+                                data-whitespace="nowrap"
+                     
+                                data-type="text" 
+                                data-responsive_offset="on"                             
+
+                                data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+                                data-textAlign="['center','center','center','center']"
+                                data-paddingtop="[10,10,10,10]"
+                                data-paddingright="[0,0,0,0]"
+                                data-paddingbottom="[0,0,0,0"
+                                data-paddingleft="[0,0,0,0]"
+
+                                style="z-index: 16; white-space: nowrap;text-transform:left;">Better than expected
+                            </div>
+
+                            <!-- LAYER NR. 13 -->
+                            <div class="tp-caption sub-title" 
+                                id="slide-3049-layer-4" 
+                                data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                data-y="['middle','middle','middle','middle']" data-voffset="['-27','-27','5','5']"
+                                data-fontsize="['18',18','18','14']"
+                                data-lineheight="['30',30','30','20']"
+                                data-fontweight="['300','300','300','300']"
+                                data-width="['660','660','660','400']"
+                                data-height="none"
+                                data-whitespace="['nowrap',normal','normal','normal']" 
+                     
+                                data-type="text" 
+                                data-responsive_offset="on" 
+
+                                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                                data-textAlign="['center','center','center','center']"
+                                data-paddingtop="[0,0,0,0]"
+                                data-paddingright="[0,0,0,0]"
+                                data-paddingbottom="[0,0,0,0]"
+                                data-paddingleft="[0,0,0,0]"
+
+                                style="z-index: 17; white-space: normal;text-transform:left;">  
+                                <!-- Lorem ipsum -->
+                            </div>
+
+
+                            <a href="#" target="_self" class="tp-caption flat-button-slider flat-button"         
+
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                         
+                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                            data-y="['middle','middle','middle','middle']" data-voffset="['63','63','63','63']" 
+                            data-width="['auto']"
+                            data-height="['auto']">Faites une demande de devis</a><!-- END LAYER LINK -->
+                        </li>
+
+                        <li data-index="rs-3047" data-transition="random-static" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"    data-rotate="0"  data-saveperformance="off"  data-title="Ken Burns" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">                        
+
+                            <!-- MAIN IMAGE -->
+                            <img src="images/slides/slide_test_4.jpg"  alt=""  data-bgposition="center center" data-kenburns="off" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+
+                    <!-- BACKGROUND VIDEO MP4 -->
+                                <!-- <div class="rs-background-video-layer" 
+                                     data-videomp4="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" 
+                                     data-videopreload="auto" 
+                                     data-volume="100" 
+                                     data-forcerewind="on" 
+                                     data-nextslideatend="true" 
+                                    data-videowidth="100%" 
+                                    data-videoheight="100%" 
+                                    data-videocontrols="none" 
+                                    data-videostartat="00:00" 
+                                    data-videoendat="00:48" 
+                                    data-videoloop="loop" 
+                                    data-forceCover="1" 
+                                    data-aspectratio="4:3" 
+                                    data-autoplay="true" 
+                                    data-autoplayonlyfirsttime="false" 
+                                ></div>  -->
+
+                    <!-- BACKGROUND VIDEO Youtube -->
+                                <!-- <div class="rs-background-video-layer" 
+                                    data-ytid="Hwn_W-X2Rds" 
+                                    data-volume="100" 
+                                    data-forcerewind="on" 
+                                    data-nextslideatend="true" 
+                                    data-videowidth="100%" 
+                                    data-videoheight="100%" 
+                                    data-videocontrols="none" 
+                                    data-videostartat="00:00" 
+                                    data-videoendat="00:48" 
+                                    data-videoloop="loop" 
+                                    data-forceCover="1" 
+                                    data-aspectratio="4:3" 
+                                    data-autoplay="true" 
+                                    data-videoattributes="version=3&enablejsapi=1&html5=1&hd=1&wmode=opaque&showinfo=0&rel=0&
+                                     origin=https://youtu.be" 
+                                ></div> -->
+                                
+                    <!-- BACKGROUND VIDEO Vimeo -->
+                            <!-- <div class="rs-background-video-layer" 
+                                data-forcerewind="on" 
+                                data-volume="mute" 
+                                data-vimeoid="82642494" 
+                                data-videoattributes="background=1&title=0&amp;byline=0&amp;portrait=0&amp;api=1" 
+                                data-videowidth="100%" 
+                                data-videoheight="100%" 
+                                data-videocontrols="none" 
+                                data-videostartat="00:00" 
+                                data-videoendat="00:48" 
+                                data-videoloop="loop" 
+                                data-forceCover="1" 
+                                data-aspectratio="4:3" 
+                                data-autoplay="true" 
+                                data-autoplayonlyfirsttime="false" ></div> -->
+
+                            <!-- LAYER NR. 12 -->
+                            <div class="tp-caption title-slide style2" 
+                                id="slide-3049-layer-7" 
+                                data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                data-y="['middle','middle','middle','middle']" data-voffset="['-113','-113','-50','-50']"  
+                                data-fontsize="['80','80','45','30']"
+                                data-fontweight="['400','400','400','400']"
+                                data-width="none"
+                                data-height="none"
+                                data-whitespace="nowrap"
+                     
+                                data-type="text" 
+                                data-responsive_offset="on"                             
+
+                                data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+                                data-textAlign="['left','left','left','left']"
+                                data-paddingtop="[10,10,10,10]"
+                                data-paddingright="[0,0,0,0]"
+                                data-paddingbottom="[0,0,0,0"
+                                data-paddingleft="[0,0,0,0]"
+
+                                style="z-index: 16; white-space: nowrap;text-transform:left;">
+                                Better than expected
+                            </div>
+
+                            <!-- LAYER NR. 13 -->
+                            <div class="tp-caption sub-title" 
+                                id="slide-3049-layer-6" 
+                                data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                data-y="['middle','middle','middle','middle']" data-voffset="['-27','-27','5','5']"
+                                data-fontsize="['18',18','18','14']"
+                                data-lineheight="['30',30','30','20']"
+                                data-fontweight="['300','300','300','300']"
+                                data-width="['660','660','660','400']"
+                                data-height="none"
+                                data-whitespace="['nowrap',normal','normal','normal']" 
+                     
+                                data-type="text" 
+                                data-responsive_offset="on" 
+
+                                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                                data-textAlign="['center','center','center','center']"
+                                data-paddingtop="[0,0,0,0]"
+                                data-paddingright="[0,0,0,0]"
+                                data-paddingbottom="[0,0,0,0]"
+                                data-paddingleft="[0,0,0,0]"
+
+                                style="z-index: 17; white-space: normal;text-transform:left;">
+                                <!-- Lorem Ipsum -->
+                            </div>
+
+
+                            <a href="#" target="_self" class="tp-caption flat-button-slider flat-button"         
+
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                         
+                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                            data-y="['middle','middle','middle','middle']" data-voffset="['63','63','63','63']"
+                            data-width="['auto']"
+                            data-height="['auto']">Demandez un devis
+                            </a><!-- END LAYER LINK -->
+                        </li> 
+
+                                               
+                    </ul>
+                </div>
+        </div><!-- END REVOLUTION SLIDER -->
+
+        <section class="flat-row v19 home1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wrap-iconbox">
+                            <div class="iconbox style2 text-left">
+                                <div class="box-header">
+                                    <!-- <div class="box-icon">
+                                        <i class="icon_globe"></i>
+                                    </div> -->
+                                </div>
+                                <div class="box-content">
+                                    <div class="box-title">Gestion des réseaux sociaux</div>    
+                                    <p>Gestion de la relation client, Gestion des pages sur les réseaux sociaux et modération des commentaires, Gestion des boutiques en ligne, Rédaction Web</p> 
+                                </div>
+                                <div class="readmore">
+                                        <br/>
+
+                                        <a class="flat-button bg-gray box-shaw-hover" href="gestions-reseaux.html">Voir Plus</a>
+                                    </div>
+                            </div>
+                            <div class="iconbox style2">
+                                <div class="box-header">
+                                    <!-- <div class="box-icon">
+                                        <i class="icon_calendar"></i>
+                                    </div> -->
+                                </div>
+                                <div class="box-content">
+                                    <div class="box-title">Dévelopment Web</div>    
+                                    <p>Développement d’applications web sur mesure, Développement de site internet, Audit technique site internet, Analyse Cyber sécurité </p> 
+                                </div>
+                                <div class="readmore">
+                                    <a class="flat-button bg-gray box-shaw-hover" href="developpement-web.html">Voir Plus</a>
+                                </div>
+                            </div>
+                            <div class="iconbox style2 text-right">
+                                <div class="box-header">
+                                    <!-- <div class="box-icon">
+                                        <i class="icon_wallet"></i>
+                                    </div> -->
+                                </div>
+                                <div class="box-content">
+                                    <div class="box-title">Etudes Statistiques</div>    
+                                    <p>Enquête en ligne auprès de populations cibles, Etude marketing et enquête satisfaction clientèle, Segmentation client, Analyse de données quantitatives et qualitatives (pouvant inclure la modélisation et prévision). </p> 
+                                </div>
+                                <div class="readmore">
+                                    <a class="flat-button bg-gray box-shaw-hover" href="etudes-statistiques.html">Voir Plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider h80">
+                    
+                </div>
+                <!-- <div class="row style-ove">
+                    <div class="col-md-7 section-reponsive col-sm-6">
+                        <div class="divider h50">
+                        </div>
+                        <div class="profile flat-pl101">
+                            <h2 class="pro-title">Hi, I’m James Watt</h2>
+                            <ul>
+                                <li>Owner/Founder,</li>
+                                <li> Executive Coach</li>
+                            </ul>
+                            <div class="pro-content">
+                                <h6><a href="#">I’VE INSPIRED HUNDREDS OF BUSINESSMEN!</a></h6>
+                                <p>I’m owner and founder of Coaching.com and author of the interna-tionally best-selling book Coach Yourself to Success: 101 Tips from a Personal Coach for Reaching Your Goals at Life and in Work and The Secret Laws of Attraction and Coach Yourself to a New Career.</p>
+                            </div>
+                            <div class="readmore">
+                                <button class="flat-button box-shaw">View Profile</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 section-reponsive col-sm-6">
+                        <div class="feature-about-us">
+                            <img src="images/work/3.jpg" alt="image">
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- <section class="flat-row v1 parallax parallax5">
+            <div class="overlay-parallax"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wrap-counter">
+                            <div class="flat-counter counter">                            
+                                <div class="content-counter">
+                                    <div class="content-number">
+                                        <div class="numb-count" data-to="10" data-speed="2000" data-waypoint-active="yes">10</div>
+                                    </div>
+                                    <div class="name-count">YEARS OF<br>EXPERIENCE</div>
+                                </div>
+                            </div><!-- /.flat-counter 
+                            <div class="flat-counter counter-left count">                            
+                                <div class="content-counter">
+                                    <div class="content-number">
+                                        <div class="numb-count" data-to="120" data-speed="2000" data-waypoint-active="yes">120</div>
+                                    </div>
+                                    <div class="name-count">SUCCESSFUL<br>ENTREPRENEURS</div>
+                                </div>
+                            </div><!-- /.flat-counter 
+                            <div class="flat-counter counter-center count">                            
+                                <div class="content-counter">
+                                    <div class="content-number">
+                                        <div class="numb-count" data-to="80" data-speed="2000" data-waypoint-active="yes">80</div>
+                                    </div>
+                                    <div class="name-count">COMPANIES<br> FOUNDED</div>
+                                </div>
+                            </div><!-- /.flat-counter 
+                            <div class="flat-counter counter-right count">                            
+                                <div class="content-counter">
+                                    <div class="content-number">
+                                        <div class="numb-count" data-to="240" data-speed="2000" data-waypoint-active="yes">240</div>
+                                    </div>
+                                    <div class="name-count">BOOKS, DVDS<br>& PODCASTS</div>
+                                </div>
+                            </div> <!-- /.flat-counter 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>  -->
+
+        <section class="flat-row v8">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title-section center">
+                            <h1 class="title">FONCTIONNEMENT?</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class=" row col-md-12 center ">
+                    <!-- <div class="col-md-6">
+                        <div class="flat-why">
+                            <img src="images/work/2.jpg" alt="image">
+                            <img src="images/work/1.jpg" alt="image">
+                        </div>
+                    </div> -->
+                    <div class="">
+                        <div class="iconbox left ">
+                            <div class="box-header">
+                                <div class="box-icon">
+                                    <i class="icon_search-2"></i>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                    <!-- <div class="box-title">Accountability</div>     -->
+                                <p>	Nous déterminons avec vous quels sont vos besoins .</p> 
+                            </div>
+                        </div>
+                        <div class="divider h14"></div>
+                        <div class="iconbox left">
+                            <div class="box-header">
+                                <div class="box-icon mt4">
+                                    <i class="icon_calendar"></i>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                <!-- <div class="box-title">Expertise</div>     -->
+                                <p>	Nous vous offrons une période d’essai compte-tenu de la tâche à accomplir </p> 
+                            </div>
+                        </div>
+                        <div class="divider h13"></div>
+                        <div class="iconbox left">
+                            <div class="box-header">
+                                <div class="box-icon">
+                                    <i class="icon-Power-2"></i>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                <!-- <div class="box-title">Speed</div>     -->
+                                <p>	Vos tâches sont entamées dès votre approbation.</p> 
+                            </div>
+                        </div>
+                        <div class="divider h12"></div>
+                        <div class="iconbox left">
+                            <div class="box-header">
+                                <div class="box-icon">
+                                    <i class="icon-Money-Smiley"></i>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                <!-- <div class="box-title">Delivery</div>     -->
+                                <p>	Vous êtes uniquement facturé par rapport au travail que nous aurons effectué. </p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="flat-row v17">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="title-section center">
+                                <h1 class="title">Nos tarifs</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="wrap-price">
+                                <article class="flat-tag">
+                                    <div class="header-tag">
+                                        <h6>Traduction</h6>
+                                        <div class="price">
+                                            <span class="">0.06 €</span>
+                                            <span class="price-month">/mots</span>
+                                        </div>
+                                    </div>
+                                    <ul class="list-tag">
+                                            <li>Lorem Ipsum</li>
+
+                                    </ul>
+                                </article>
+                                <article class="flat-tag">
+                                    <div class="header-tag">
+                                        <h6>Gestion des réseaux sociaux</h6>
+                                        <div class="price">
+                                            <span class="">5 €</span>
+                                            <span class="price-month">/heure</span>
+                                        </div>
+                                    </div>
+                                    <ul class="list-tag">
+                                            <li>Lorem Ipsum</li>
+
+                                    </ul>
+                                </article>
+                                <article class="flat-tag">
+                                    <div class="header-tag">
+                                        <h6>Rédaction web</h6>
+                                        <div class="price">
+                                            <span class="">0,30 €</span>
+                                            <span class="price-month">/mots</span>
+                                        </div>
+                                    </div>
+                                    <ul class="list-tag">
+                                            <li>Lorem Ipsum</li>
+
+                            
+                                    </ul>
+                                </article>
+                                <article class="flat-tag">
+                                    <div class="header-tag">
+                                        <h6>Transcription de données</h6>
+                                        <div class="price">
+                                            <span class="">8 €</span>
+                                            <span class="price-month">/heure</span>
+                                        </div>
+                                    </div>
+                                    <ul class="list-tag">
+                                        <li>Lorem Ipsum</li>
+                                                   
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider h80"></div>
+     
+                </div>
+            </section>
+    
+
+ 
+
+        <!-- <section class="flat-row v2 sec-testimonial">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title-section center">
+                            <h1 class="title">Testimonials</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="flat-testimonials  owl-carousel" data-item="2" data-nav="false" data-dots="false" data-auto="true">
+                            <div class="testimonials space"> 
+                                <div class="avatar">    
+                                    <img src="images/testimonial/1.jpg" alt="image">
+                                </div>  
+                                <div class="message">
+                                    <strong class="title">i have successfully completed</strong>                                
+                                    <blockquote class="whisper">
+                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </blockquote>
+                                    <div class="name"><span>Jack Powell</span></div>
+                                    <div class="position">CEO Deer Creative</div>
+                                </div>                      
+                            </div>
+                            <div class="testimonials"> 
+                                <div class="avatar">   
+                                    <img src="images/testimonial/2.jpg" alt="image">
+                                </div>  
+                                <div class="message">
+                                    <strong class="title">i have successfully completed</strong>                                
+                                    <blockquote class="whisper">
+                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </blockquote>
+                                    <div class="name"><span>Ollie Schneider</span></div>
+                                    <div class="position">Creative Director</div>
+                                </div>                      
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- <section class="flat-row v3 subscribe">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title-section center sub">
+                            <h1 class="title">Subscribe Email</h1>
+                            <div class="sub-title">
+                                Subscribe now and receive weekly newsletter interes-ting posts , and much more!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form id="subscribe-form" class="flat-contact-form bg-transparent" method="post" action="#" data-mailchimp="true">
+                            <div class="field clearfix" id="subscribe-content"> 
+                                <p class="wrap-input-email">
+                                    <input type="text" tabindex="2"  id="subscribe-email" name="subscribe-email" placeholder="Enter your email">
+                                </p>
+                                <p class="wrap-btn">
+                                    <button type="button" id="subscribe-button" class="flat-button subscribe-submit" title="Subscribe now">SUBSCRIBE</button>
+                                </p>
+                            </div>
+                            <div id="subscribe-msg"></div>
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+         <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row"> 
+                    <div class="col-md-4 col-sm-6">  
+                            <div class="widget widget-usehul">
+                                    <h4 class="widget-title">Nos infos de contact</h4>
+                            <ul class="flat-information">
+                                <li class="phone"><a href="#">+229 XXXXXXXX</a> </li>
+                                <li class="email"><a href="#">XXXXX@monitor.com</a></li>
+                                <li class="address"><a href="#" >XXXXXxXX Cotonou, Benin</a></li>
+                            </ul> 
+                            <ul class="social-links style2">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>        
+                        </div>         
+                    </div><!-- /.col-md-3 --> 
+
+                    <!-- <div class="col-md-2 col-sm-6">  
+                        <div class="widget widget-feature">
+                            <h4 class="widget-title">FEATURED COURSES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Starting Soon</a></li>
+                                <li><a href="#">Just Added</a></li>
+                                <li><a href="#">Most Viewed</a></li>
+                                <li><a href="#">Top Paid</a></li>
+                            </ul>
+                        </div>
+                    </div>/.col-md-3 -->
+                    <!-- <div class="col-md-2 col-sm-6">  
+                        <div class="widget widget-useful">
+                            <h4 class="widget-title">CATEGORIES</h4>
+                             <ul class="feature">
+                                <li><a href="#">Assistance Administrative</a></li>
+                                <li><a href="#">Gestion de réseaux sociaux</a></li>
+                                <li><a href="#">Services Après Vente</a></li>
+                                <li><a href="#">Développement Web</a></li>
+                                <li><a href="#">Etudes Statistiques</a></li>
+                                <li><a href="#">Traductions</a></li>
+                            </ul> 
+                        </div>
+                    </div> -->
+                    <!-- /.col-md-3 -->
+                    <div class="col-md-4 col-sm-6">  
+                        <div class="widget widget-useful">
+                            <h4 class="widget-title">Liens utiles</h4>
+                            <ul class="one-half">
+                                    <li><a href="#">Assistance Administrative</a></li>
+                                    <li><a href="#">Gestion de réseaux sociaux</a></li>
+                                    <li><a href="#">Services Après Vente</a></li>
+                            </ul>
+                            <ul class="one-half">
+                                    <li><a href="#">Développement Web</a></li>
+                                    <li><a href="#">Etudes Statistiques</a></li>
+                                    <li><a href="#">Traductions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.col-md-3 -->
+                </div><!-- /.row -->    
+            </div><!-- /.container -->
+        </footer>
+
+        <!-- Bottom -->
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-sm-6 bottom-reponsive">
+                        <div class="copyright">
+                           <p>© 2020 <a href="#">BEX Technology</a>. All rights reserved.</p>                   
+                        </div>                 
+                    </div> 
+                    <!-- <div class="col-md-3 col-sm-6 bottom-reponsive">
+                        <ul class="link-bottom">
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div> -->
+                </div>                  
+            </div><!-- /.container -->
+        </div><!-- bottom -->
+
+         <!-- Go Top -->
+        <a class="go-top">
+            <i class="fa fa-angle-up"></i>
+        </a>  
+    
+
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    
+    <!-- Javascript -->
+    <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="javascript/jquery.easing.js"></script> 
+    <script type="text/javascript" src="javascript/jquery-waypoints.js"></script> 
+    <script type="text/javascript" src="javascript/owl.carousel.js"></script>
+    <script type="text/javascript" src="javascript/jquery-validate.js"></script>
+    
+    <script type="text/javascript" src="javascript/jquery.event.move.js"></script>
+    <script type="text/javascript" src="javascript/jquery.twentytwenty.js"></script>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <script type="text/javascript" src="javascript/jquery.cookie.js"></script>
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <script type="text/javascript" src="javascript/jquery-countTo.js"></script>
+
+    <script type="text/javascript" src="javascript/parallax.js"></script>
+    <script type="text/javascript" src="javascript/jquery.magnific-popup.min.js"></script>   
+    <script src="javascript/jquery.fancybox.js"></script>
+    
+    <script type="text/javascript" src="javascript/main.js"></script>
+
+         <!-- Revolution Slider -->
+    <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="revolution/js/slider3.js"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->    
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+</body>
 </html>

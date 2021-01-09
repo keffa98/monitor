@@ -1147,9 +1147,8 @@ h6 { font-size: 18px; line-height: 18px; }
 }
 .page-content  {	
     
-    background-image: url("images/slides/slide_test_7.jpg") ;
     text-align: left;
-    color: #000;
+    color: #fff;
     margin-bottom: 4px;
     line-height: 58px;
     margin-left: -2px;
@@ -1190,7 +1189,7 @@ h6 { font-size: 18px; line-height: 18px; }
 .breadcrumbs ul li:last-child::before {
 	width: 0;
 	height: 0;
-	background-color: transparent;
+    background-color: transparent;
 	content: "";
 }
 
@@ -5597,7 +5596,7 @@ td.product-subtotal {
 	background-size: inherit;
 }
 
-.parallax1 { background-image: url(../images/parallax/bg1.jpg); }
+.parallax1 { background-image: url(../images/slides/slide_test_7.jpg); }
 .parallax2 { background-image: url(../images/parallax/bg2.jpg); }
 .parallax3 { background-image: url(../images/parallax/bg3.jpg); }
 .parallax4 { background-image: url(../images/parallax/bg4.jpg); }

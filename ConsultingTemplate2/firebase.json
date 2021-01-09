@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "monitor-beta",
     "public": "public",
     "ignore": [
       "firebase.json",
